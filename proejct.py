@@ -11,6 +11,11 @@ while number != random:
         print("Last guesses were", guess_history)
         number = int(input("Your guess was greater than the number, Try Again: "))
         guess_history.append(number)
-    if number == random:
-        print("Your guesses were", guess_history)
-        print(number, "was correct!")
+    if number < random:
+        print("Last guesses were", guess_history)
+        number = int(input("Your guess was Less than the number, Try Again: "))
+        guess_history.append(number)
+
+if number == random:
+    print("Your guesses were", guess_history)
+    print(number, "was correct!")
